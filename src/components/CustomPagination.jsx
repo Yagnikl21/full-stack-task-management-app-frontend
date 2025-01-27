@@ -56,7 +56,7 @@ const CustomPagination = ({ pageInformation, page, setPage, totalPages }) => {
                 <nav aria-label="Page navigation example">
                     <ul className="flex items-center -space-x-px text-sm pt-3 justify-end">
                         <div
-                            className={`${pageInformation?.previous_page === 0 ? 'cursor-not-allowed' : ''} flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg`}
+                            className={`${pageInformation?.previous_page === 0 || page==1 ? 'cursor-not-allowed' : ''} flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg`}
                             onClick={() => {
                                 if (pageInformation?.previous_page !== 0) {
                                     setPage(page - 1);
@@ -65,7 +65,7 @@ const CustomPagination = ({ pageInformation, page, setPage, totalPages }) => {
                             }}
                         >
                             <ChevronLeftIcon
-                                className={`h-5 w-5 ${pageInformation?.previous_page === 0 ? 'text-gray-300 cursor-not-allowed' : 'cursor-pointer'}`}
+                                className={`h-5 w-5 ${pageInformation?.previous_page === 0 || page==1  ? 'text-gray-300 cursor-not-allowed' : 'cursor-pointer'}`}
                             />
                         </div>
                         {getPaginationRange().map((pageNum, i) => (
