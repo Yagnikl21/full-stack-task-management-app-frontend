@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api"; // Define your API base URL here
+const BASE_URL = "https://full-stack-task-management-app-an61.onrender.com/api"; // Define your API base URL here
 
 export const endpoints = {
   LOGIN: `${BASE_URL}/auth/login`,  
